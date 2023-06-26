@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import video1 from "./video1.mp4";
+import video2 from "./video2.mp4";
+import suica1 from "./suica1.mp4";
+import suica2 from "./suica2.mp4";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 style={{ padding: 8, borderBottom: "2px solid #CCCC" }}>
+        Paisagens do mundo
+      </h1>
+      <h3>Maldivas</h3>
+      <video src={video1} controls loop autoPlay width={720}></video>
+      <video src={video2} controls loop autoPlay width={720}></video>
+
+      <h3>Suiça</h3>
+      <video src={suica1} controls loop autoPlay width={720}></video>
+      <video src={suica2} controls loop autoPlay width={720}></video>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
